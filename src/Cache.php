@@ -190,7 +190,7 @@ class Cache
      */
     protected function getDirectoryAndFileNames($request)
     {
-        $segments = explode('/', ltrim($request->getPathInfo(), '/'));
+        $segments = explode('/', ltrim(\Request::getPathInfo().\Request::getQueryString(), '/'));
 
         $file = $this->aliasFilename(array_pop($segments)).'.html';
 

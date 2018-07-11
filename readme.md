@@ -84,7 +84,7 @@ In order to serve the static files directly once they've been cached, you need t
     }
 
     location / {
-        try_files $uri $uri/ /page-cache/$uri.html /index.php?$query_string;
+        try_files $uri $uri/ /page-cache/$uri$query_string.html /index.php?$query_string;
     }
     ```
 
